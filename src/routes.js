@@ -13,7 +13,12 @@ const Routes = createAppContainer(
                     title: 'Usuários',
                 },
             },
-            User,
+            User: {
+                screen: User,
+                navigationOptions: {
+                    title: 'Perfil no GitHub',
+                },
+            },
         },
         {
             defaultNavigationOptions: {
