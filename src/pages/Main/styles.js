@@ -22,7 +22,7 @@ export const Input = styled.TextInput.attrs({
     background: #eee;
     border-radius: 4px;
     padding: 0 15px;
-    border: 1px solid #eee;
+    border: ${props => (props.notFound ? '1px solid red' : '1px solid #eee')};
 `;
 
 export const SubmitButton = styled(RectButton)`

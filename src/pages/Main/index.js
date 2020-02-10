@@ -31,6 +31,7 @@ export default class Main extends Component {
         newUser: '',
         users: [],
         loading: false,
+        notFound: false,
     };
 
     async componentDidMount() {
@@ -50,21 +51,34 @@ export default class Main extends Component {
     }
 
     handleAddUser = async () => {
-        const { users, newUser } = this.state;
+        try {
+            const { users, newUser } = this.state;
 
-        this.setState({ loading: true });
+            this.setState({ loading: true });
 
-        const response = await api.get(`/users/${newUser}`);
+            const response = await api.get(`/users/${newUser}`);
 
-        const data = {
-            name: response.data.name,
-            login: response.data.login,
-            bio: response.data.bio,
-            avatar: response.data.avatar_url,
-        };
+            const data = {
+                name: response.data.name,
+                login: response.data.login,
+                bio: response.data.bio,
+                avatar: response.data.avatar_url,
+            };
 
-        this.setState({ users: [...users, data], newUser: '', loading: false });
+            users.map(user => {
+                if (data.login === user.login) {
+                    throw new Error('Repositório duplicado');
+                }
+            });
 
+            this.setState({
+                users: [...users, data],
+                newUser: '',
+                loading: false,
+            });
+        } catch (err) {
+            this.setState({ loading: false, notFound: true });
+        }
         Keyboard.dismiss();
     };
 
@@ -74,8 +88,12 @@ export default class Main extends Component {
         navigation.navigate('User', { user });
     };
 
+    handleChangeInput = text => {
+        this.setState({ newUser: text, notFound: text === '' && false });
+    };
+
     render() {
-        const { users, newUser, loading } = this.state;
+        const { users, newUser, loading, notFound } = this.state;
 
         return (
             <Container>
@@ -85,9 +103,10 @@ export default class Main extends Component {
                         autoCapitalize="none"
                         placeholder="Adicionar usuário"
                         value={newUser}
-                        onChangeText={text => this.setState({ newUser: text })}
+                        onChangeText={text => this.handleChangeInput(text)}
                         returnKeyType="send"
                         onSubmitEditing={this.handleAddUser}
+                        notFound={notFound}
                     />
                     <SubmitButton
                         loading={loading}
