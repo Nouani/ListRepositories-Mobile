@@ -35,6 +35,7 @@ export default class Main extends Component {
     };
 
     async componentDidMount() {
+        // AsyncStorage.clear();
         const users = await AsyncStorage.getItem('users');
 
         if (users) {
