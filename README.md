@@ -5,24 +5,24 @@
 ---
 
 <p align="center">
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Nouani/GoStack-SixthChallenge.svg">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Nouani/AddRepositories-Mobile.svg">
 
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Nouani/GoStack-SixthChallenge.svg">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Nouani/AddRepositories-Mobile.svg">
 
-  <a href="https://www.codacy.com/app/Nouani/GoStack-SixthChallenge?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Nouani/GoStack-SixthChallenge&amp;utm_campaign=Badge_Grade">
+  <a href="https://www.codacy.com/app/Nouani/AddRepositories-Mobile?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Nouani/AddRepositories-Mobile&amp;utm_campaign=Badge_Grade">
     <img alt="Codacy grade" src="https://img.shields.io/codacy/grade/1b577a07dda843aba09f4bc55d1af8fc.svg">
   </a>
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/Nouani/GoStack-SixthChallenge.svg">
-  <a href="https://github.com/Nouani/GoStack-SixthChallenge/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Nouani/GoStack-SixthChallenge.svg">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/Nouani/AddRepositories-Mobile.svg">
+  <a href="https://github.com/Nouani/AddRepositories-Mobile/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Nouani/AddRepositories-Mobile.svg">
   </a>
 
-  <a href="https://github.com/Nouani/GoStack-SixthChallenge/issues">
-    <img alt="Repository issues" src="https://img.shields.io/github/issues/Nouani/GoStack-SixthChallenge.svg">
+  <a href="https://github.com/Nouani/AddRepositories-Mobile/issues">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/Nouani/AddRepositories-Mobile.svg">
   </a>
 
-  <img alt="GitHub" src="https://img.shields.io/github/license/Nouani/GoStack-SixthChallenge.svg">
+  <img alt="GitHub" src="https://img.shields.io/github/license/Nouani/AddRepositories-Mobile.svg">
 </p>
 
 
@@ -62,10 +62,10 @@ We had to create a Mobile application using React Native, which listed GitHub us
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/Nouani/GoStack-SixthChallenge.git
+$ git clone https://github.com/Nouani/AddRepositories-Mobile.git
 
 # Go into the repository
-$ cd GoStack-SixthChallenge
+$ cd AddRepositories-Mobile
 
 # Install dependencies
 $ yarn
