@@ -22,12 +22,12 @@ export default function App() {
   }, []);
 
   async function handleLikeRepository(id) {
-    // Implement "Like Repository" functionality
+    console.log(id);
   }
 
   return (
     <>
-      <StatusBar barStyle="light-content" backgroundColor="#7159c1" />
+      <StatusBar barStyle="light-content" backgroundColor="#111728" />
       <SafeAreaView style={styles.container}>
         <FlatList
           data={repositories}
@@ -74,13 +74,14 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#7159c1",
+    backgroundColor: "#111728",
   },
   repositoryContainer: {
-    marginBottom: 15,
+    marginTop: 15,
     marginHorizontal: 15,
     backgroundColor: "#fff",
     padding: 20,
+    borderRadius: 5,
   },
   repository: {
     fontSize: 32,
@@ -98,6 +99,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 5,
     color: "#fff",
+    borderRadius: 3,
   },
   likesContainer: {
     marginTop: 15,
@@ -110,14 +112,16 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   button: {
-    marginTop: 10,
+    marginTop: 20,
   },
   buttonText: {
-    fontSize: 14,
+    fontSize: 18,
     fontWeight: "bold",
     marginRight: 10,
     color: "#fff",
-    backgroundColor: "#7159c1",
-    padding: 15,
+    backgroundColor: "#2458e5",
+    textAlign: 'center',
+    paddingVertical: 8,
+    borderRadius: 2,
   },
 });
